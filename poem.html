@@ -1,1 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Poem Gallery</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .poem-card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .poem-card:hover {
+      transform: scale(1.02);
+    }
+
+    .poem-title {
+      font-size: 1.3em;
+      color: #555;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .poem-content {
+      font-size: 1em;
+      color: #444;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Poem Gallery</h1>
+
+  <div class="gallery">
+    <div class="poem-card">
+      <div class="poem-title">The Sunrise</div>
+      <div class="poem-content">
+        The sun peeks through the morning mist,  
+        A golden hush, a gentle twist.  
+        Each ray a whisper, bold yet shy,  
+        Painting warmth across the sky.
+      </div>
+    </div>
+
+    <div class="poem-card">
+      <div class="poem-title">Waves</div>
+      <div class="poem-content">
+        The ocean breathes in rhythmic grace,  
+        A mirror to the sky’s embrace.  
+        With every crash and every sigh,  
+        It sings the songs that never die.
+      </div>
+    </div>
+
+    <div class="poem-card">
+      <div class="poem-title">Night Whispers</div>
+      <div class="poem-content">
+        In quiet dark where dreams are born,  
+        The stars spill light till early morn.  
+        The moon, a keeper of the hush,  
+        Listens close to every crush.
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
 
