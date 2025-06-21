@@ -36,13 +36,24 @@
       margin: 0 auto;
     }
 
-    .poem-card {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
-    }
+    .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #11d5f8 0%, #8bd5ca 100%);
+            transition: width 0.3s ease;
+        }
 
     .poem-card:hover {
       transform: scale(1.02);
