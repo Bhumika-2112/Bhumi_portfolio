@@ -3,74 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Poems | Bhumi</title>
+  <title>Poem Gallery | Bhumi</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
-      padding: 30px;
+      background-color: #f7f7f7;
+      color: #333;
+      padding: 40px;
     }
 
     h1 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .poem-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
 
     .poem-card {
-      background-color: #1c1c1c;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      overflow: hidden;
       text-decoration: none;
       color: inherit;
+      transition: transform 0.3s ease;
     }
 
     .poem-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transform: translateY(-5px);
+    }
+
+    .poem-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .poem-content {
+      padding: 15px;
+      text-align: center;
     }
 
     .poem-title {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
-      margin-bottom: 10px;
-      color: #00bfff;
+      margin-bottom: 8px;
+      color: #2a2a2a;
     }
 
     .poem-snippet {
-      font-size: 0.95rem;
-      color: #ccc;
+      font-size: 0.9rem;
+      color: #777;
     }
   </style>
 </head>
 <body>
 
-  <h1>My Poems</h1>
+  <h1>My Illustrated Poems</h1>
 
   <div class="poem-grid">
-    <a href="poem1.html" class="poem-card">
-      <div class="poem-title">The Silent Sky</div>
-      <div class="poem-snippet">In quiet nights, the stars confess...</div>
+    <a class="poem-card" href="poem1.html">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/woman-sitting-on-moon-and-writing-poetry-4161302-3448804.png" alt="Poem Illustration 1">
+      <div class="poem-content">
+        <div class="poem-title">Moonlight Letters</div>
+        <div class="poem-snippet">She wrote where silence echoed soft...</div>
+      </div>
     </a>
-    <a href="poem2.html" class="poem-card">
-      <div class="poem-title">Unfolding Petals</div>
-      <div class="poem-snippet">Softly she bloomed, in spring’s warm hush...</div>
+
+    <a class="poem-card" href="poem2.html">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/girl-writing-poetry-in-her-diary-4483458-3727822.png" alt="Poem Illustration 2">
+      <div class="poem-content">
+        <div class="poem-title">Diary of Dreams</div>
+        <div class="poem-snippet">Each line, a fragment of her soul...</div>
+      </div>
     </a>
-    <a href="poem3.html" class="poem-card">
-      <div class="poem-title">Canvas of Thought</div>
-      <div class="poem-snippet">Words painted dreams where silence spoke...</div>
+
+    <a class="poem-card" href="poem3.html">
+      <img src="https://cdni.iconscout.com/illustration/premium/thumb/poetry-recitation-3279911-2748882.png" alt="Poem Illustration 3">
+      <div class="poem-content">
+        <div class="poem-title">Voices in Verse</div>
+        <div class="poem-snippet">Words that bloom beyond the page...</div>
+      </div>
     </a>
-    <!-- Add more cards as needed -->
   </div>
 
 </body>
