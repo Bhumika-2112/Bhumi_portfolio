@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poems | Bhumi</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .poem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .poem-card {
+      background-color: #1c1c1c;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .poem-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    }
+
+    .poem-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #00bfff;
+    }
+
+    .poem-snippet {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Poems</h1>
+
+  <div class="poem-grid">
+    <a href="poem1.html" class="poem-card">
+      <div class="poem-title">The Silent Sky</div>
+      <div class="poem-snippet">In quiet nights, the stars confess...</div>
+    </a>
+    <a href="poem2.html" class="poem-card">
+      <div class="poem-title">Unfolding Petals</div>
+      <div class="poem-snippet">Softly she bloomed, in spring’s warm hush...</div>
+    </a>
+    <a href="poem3.html" class="poem-card">
+      <div class="poem-title">Canvas of Thought</div>
+      <div class="poem-snippet">Words painted dreams where silence spoke...</div>
+    </a>
+    <!-- Add more cards as needed -->
+  </div>
+
+</body>
+</html>
