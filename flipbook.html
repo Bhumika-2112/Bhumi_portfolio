@@ -39,9 +39,9 @@
       perspective: 2000px;
     }
 
-   .page {
+  .page {
   width: 100%;
-  height: 200%;
+  height: 100%;
   position: absolute;
   background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -50,11 +50,9 @@
   backface-visibility: hidden;
   border-radius: 8px;
 
-  /* Flex to center content */
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
+  justify-content: center;    /* center vertically */
+  align-items: center;        /* center horizontally */
   text-align: center;
   padding: 30px;
   box-sizing: border-box;
@@ -109,18 +107,21 @@
     Your browser does not support the video tag.
   </video>
 
-  <div class="book" id="book">
-    <div class="page" id="page1">
-      <h2> Time </h2>
-      <p> Sitting on a chair looking at the window <br>
-  Waiting for an unknown person <br>
-  To light up my mystery world <br>
-  Who can cheer me every now n then <br>
-  Shows me the delight universe of joy <br>
-  Wanna find the truth of universe with u <br>
-  Every day start with waiting for someone new <br>
-  Ends up with getting new hopes for next day...!..</p>
-    </div>
+  <div class="page" id="page1">
+  <div class="content">
+    <h2>Time</h2>
+    <p>
+Sitting on a chair looking at the window<br>
+Waiting for an unknown person<br>
+To light up my mystery world<br>
+Who can cheer me every now n then<br>
+Shows me the delight universe of joy<br>
+Wanna find the truth of universe with u<br>
+Every day starts with waiting for someone new<br>
+Ends up with getting new hopes for next day...!..
+    </p>
+  </div>
+</div>
     <div class="page" id="page2">
       <h2>Page 2 — Bloom</h2>
       <p>She bloomed not because the world was kind,  
