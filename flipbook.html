@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Poem Flip Book</title>
+  <style>
+    body {
+      margin: 0;
+      background: #f7f1e3;
+      font-family: 'Georgia', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .book {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      perspective: 2000px;
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transform-origin: left center;
+      transition: transform 1s ease;
+      backface-visibility: hidden;
+      padding: 30px;
+      box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    .page h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .page p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .page.flipped {
+      transform: rotateY(-180deg);
+    }
+
+    .controls {
+      position: absolute;
+      bottom: -50px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .controls button {
+      background: #2c3e50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .controls button:hover {
+      background: #34495e;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="book" id="book">
+    <div class="page" id="page1">
+      <h2>Page 1 — The Whisper</h2>
+      <p>The wind whispered across the page,  
+      Carrying words once locked in cage.  
+      In silence loud, the ink did speak,  
+      Of dreams held high, and hearts grown weak.</p>
+    </div>
+    <div class="page" id="page2">
+      <h2>Page 2 — Bloom</h2>
+      <p>She bloomed not because the world was kind,  
+      But because her soul refused to stay blind.  
+      In shadows deep she found her way,  
+      And grew toward her light each day.</p>
+    </div>
+    <div class="page" id="page3">
+      <h2>Page 3 — The End</h2>
+      <p>Some endings are poems too,  
+      Not in words, but in the view.  
+      Close the book but leave the part,  
+      That still lives inside your heart.</p>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevPage()">← Prev</button>
+    <button onclick="nextPage()">Next →</button>
+  </div>
+
+  <script>
+    const pages = document.querySelectorAll('.page');
+    let currentPage = 0;
+
+    pages.forEach((page, index) => {
+      page.style.zIndex = pages.length - index;
+    });
+
+    function nextPage() {
+      if (currentPage < pages.length) {
+        pages[currentPage].classList.add('flipped');
+        currentPage++;
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        pages[currentPage].classList.remove('flipped');
+      }
+    }
+  </script>
+
+</body>
+</html>
