@@ -152,6 +152,14 @@
       }
     }
   </script>
+  <script>
+  const bgVideo = document.getElementById('bg-video');
+  bgVideo.addEventListener('ended', function () {
+    this.currentTime = 0;
+    this.play();
+  });
+</script>
+
 
 </body>
 </html>
